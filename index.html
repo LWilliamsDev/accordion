@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Accordion Example</title>
+    <link rel="stylesheet" href="accordion.min.css" />
+  </head>
+  <body>
+    <h1>Accordion Example</h1>
+    <div id="accordion" class="accordion_container">
+      <h2 class="accordion__header" id="heading__header1">
+        <button class="accordion__trigger" aria-expanded="false" aria-controls="sect__header1" id="button__header1">Header 1</button>
+      </h2>
+      <div class="accordion__panel"  id="sect__header1" aria-labelledby="button__header1">Header 1 content
+        <h3 class="accordion__header" id="heading__header1-1">
+          <button class="accordion__trigger" aria-expanded="false" aria-controls="sect__header1-1" id="button__header1-1">Header 1.1</button>
+        </h3>
+        <div class="accordion__panel" id="sect__header1-1" aria-labelledby="button__header1-1">Header 1.1 content
+            <h3 class="accordion__header" id="heading__header1-1-1">
+              <button class="accordion__trigger" id="button__header1-1-1" aria-controls="sect__header1-1-1" aria-expanded="false">Header 1.1.1</button>
+            </h3>
+            <div class="accordion__panel" aria-labelledby="button__header1-1-1" id="sect__header1-1-1">Header 1.1.1 content</div>
+        </div>
+      </div>
+
+      <h2 class="accordion__header" id="heading__header2">
+        <button class="accordion__trigger" id="button__header2" aria-controls="sect__header2">Header 2</button>
+      </h2>
+      <div class="accordion__panel" id="sect__header2" aria-expanded="false" aria-labelledby="button__header2">Header 2 content</div>
+    </div>
+
+    <h2 id="blah">Test Header with no Accordion</h2>
+    <p><a href="#heading__header1" class="accordion__open-link">Open header__header1</a></p>
+    <p><a href="#heading__header1-1-1" class="accordion__open-link">Open header__header1-1-1</a></p>
+
+    <script src="accordion.min.js" async></script>
+  </body>
+</html>
